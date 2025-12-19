@@ -57,36 +57,59 @@ const About = () => {
             <div className="top-grid">
                 <div className="md:col-span-3">
                     <div className="noisy" />
-                    <img src="/images/abt1.png" alt="grid-img-1" />
+                    <img src="/images/abt1.png" alt="Cocktail preparation - mudding fresh ingredients" />
                 </div>
-                <div className="md:col-span-3 relative p-5 flex flex-col justify-center h-full">
-                    <div className="absolute inset-0 border border-white/20 shadow-[0_0_20px_rgba(255,255,255,0.1)]" />
-                    <h2 className="text-3xl font-bold text-white mb-4 relative z-10">Crafted to Impress</h2>
-                    <hr className="border-white/20 mb-6 relative z-10" />
-                    <ul className="space-y-4 relative z-10">
-                        {featureLists.map((item, index) => (
-                            <li key={index} className="flex items-center gap-3">
-                                <img src="/images/check.png" alt="check" className="w-5 h-5 object-contain" />
-                                <p className="text-lg text-white/80 font-light">{item}</p>
-                            </li>
-                        ))}
-                    </ul>
+
+                {/* FIXED: Added proper background and styling */}
+                <div className="md:col-span-3 relative overflow-hidden rounded-3xl">
+                    {/* Gradient background layer */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/80 backdrop-blur-md" />
+
+                    {/* Border and glow effect */}
+                    <div className="absolute inset-0 border border-white/20 rounded-3xl shadow-[0_0_30px_rgba(231,211,147,0.15)]" />
+
+                    {/* Content with proper z-index */}
+                    <div className="relative z-10 p-8 flex flex-col justify-center h-full">
+                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 tracking-tight">
+                            Crafted to Impress
+                        </h2>
+
+                        <hr className="border-white/30 mb-8" />
+
+                        <ul className="space-y-5">
+                            {featureLists.map((item, index) => (
+                                <li key={index} className="flex items-center gap-4 group">
+                                    <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center bg-yellow/10 rounded-full group-hover:bg-yellow/20 transition-colors">
+                                        <img
+                                            src="/images/check.png"
+                                            alt=""
+                                            className="w-4 h-4 object-contain"
+                                            aria-hidden="true"
+                                        />
+                                    </div>
+                                    <p className="text-base md:text-lg text-white/90 font-light leading-relaxed">
+                                        {item}
+                                    </p>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
 
                 <div className="md:col-span-6">
                     <div className="noisy" />
-                    <img src="/images/abt4.png" alt="grid-img-4" />
+                    <img src="/images/abt4.png" alt="Signature cocktails on display" />
                 </div>
             </div>
 
             <div className="bottom-grid">
                 <div className="md:col-span-8">
                     <div className="noisy" />
-                    <img src="/images/abt3.png" alt="grid-img-3" />
+                    <img src="/images/abt3.png" alt="Bar atmosphere with premium spirits" />
                 </div>
                 <div className="md:col-span-4">
                     <div className="noisy" />
-                    <img src="/images/abt2.png" alt="grid-img-2" />
+                    <img src="/images/abt2.png" alt="Fresh garnishes and ingredients" />
                 </div>
             </div>
         </div>
