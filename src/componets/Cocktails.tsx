@@ -28,10 +28,10 @@ const Cocktails = () => {
             <img src="/images/cocktail-right-leaf.png" alt="r-leaf" id="c-right-leaf" />
 
             <div className="list">
-                <div className="popular">
-                    <h2>Most popular cocktails:</h2>
+                <div className="popular bg-white/5 backdrop-blur-sm border border-white/10 shadow-lg p-6 rounded-2xl">
+                    <h2 className='flex justify-center'>Most popular cocktails</h2>
 
-                    <ul>
+                    <ul className="bg-white/5 backdrop-blur-sm border border-white/10 shadow-lg p-6 rounded-2xl">
                         {cocktailLists.map(({ name, country, detail, price }) => (
                             <li key={name}>
                                 <div className="md:me-28">
@@ -44,10 +44,10 @@ const Cocktails = () => {
                     </ul>
                 </div>
 
-                <div className="loved">
-                    <h2>Most loved mocktails:</h2>
+                <div className="loved bg-white/5 backdrop-blur-sm border border-white/10 shadow-lg p-6 rounded-2xl">
+                    <h2 className='flex justify-center'>Most loved mocktails</h2>
 
-                    <ul>
+                    <ul className="bg-white/5 backdrop-blur-sm border border-white/10 shadow-lg p-6 rounded-2xl">
                         {mockTailLists.map(({ name, country, detail, price }) => (
                             <li key={name}>
                                 <div className="me-28">
